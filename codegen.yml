@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://datastory-cloud-v2.stellate.sh/"
+documents: "src/**/*.tsx"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

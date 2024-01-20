@@ -1,4 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+export default {
+    webpack: (config, { isServer }) => {
+      
+      config.module.rules.push({
+        test: /\.csv$/,
+        loader: 'csv-loader',
+      });
+  
+      return config;
+    },
+  };
 
-export default nextConfig;
+  
